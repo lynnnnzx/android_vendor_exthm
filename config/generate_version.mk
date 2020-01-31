@@ -19,38 +19,33 @@ ifndef EXTHM_BUILDTYPE
 endif
 
 # Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE RC BETA ALPHA EXPERIMENTAL SNAPSHOT,$(EXTHM_BUILDTYPE)),)
+ifeq ($(filter OFFICIAL,$(EXTHM_COMPILERTYPE)),)
+    EXTHM_COMPILERTYPE :=
+endif
+
+# Filter out random types, so it'll reset to SNAPSHOT
+ifeq ($(filter RELEASE BETA ALPHA SNAPSHOT,$(EXTHM_BUILDTYPE)),)
     EXTHM_BUILDTYPE :=
 endif
 
-ifdef EXTHM_BUILDTYPE
-    ifneq ($(EXTHM_BUILDTYPE), SNAPSHOT)
-        ifdef EXTHM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL
-            EXTHM_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from EXTHM_EXTRAVERSION
-            EXTHM_EXTRAVERSION := $(shell echo $(EXTHM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to EXTHM_EXTRAVERSION
-            EXTHM_EXTRAVERSION := -$(EXTHM_EXTRAVERSION)
-        endif
-    else
-        ifndef EXTHM_EXTRAVERSION
-            # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            EXTHM_BUILDTYPE := EXPERIMENTAL
-        else
-            # Remove leading dash from EXTHM_EXTRAVERSION
-            EXTHM_EXTRAVERSION := $(shell echo $(EXTHM_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to EXTHM_EXTRAVERSION
-            EXTHM_EXTRAVERSION := -$(EXTHM_EXTRAVERSION)
-        endif
-    endif
-else
-    # If EXTHM_BUILDTYPE is not defined, set to UNOFFICIAL
-    EXTHM_BUILDTYPE := UNOFFICIAL
-    EXTHM_EXTRAVERSION :=
+ifndef EXTHM_COMPILERTYPE
+    # If EXTHM_COMPILERTYPE is not defined, set to UNOFFICIAL
+    EXTHM_COMPILERTYPE := UNOFFICIAL
 endif
 
-ifeq ($(EXTHM_BUILDTYPE), UNOFFICIAL)
+ifndef EXTHM_BUILDTYPE
+    # If EXTHM_BUILDTYPE is not defined, set to SNAPSHOT
+    EXTHM_BUILDTYPE := SNAPSHOT
+endif
+
+ifdef EXTHM_EXTRAVERSION
+    # Remove leading dash from EXTHM_EXTRAVERSION
+    EXTHM_EXTRAVERSION := $(shell echo $(EXTHM_EXTRAVERSION) | sed 's/-//')
+    # Add leading dash to EXTHM_EXTRAVERSION
+    EXTHM_EXTRAVERSION := -$(EXTHM_EXTRAVERSION)
+endif
+
+ifeq ($(EXTHM_COMPILERTYPE), UNOFFICIAL)
     ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
         EXTHM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
     endif
@@ -73,15 +68,15 @@ ifeq ($(EXTHM_BUILDTYPE), RELEASE)
 else
     ifeq ($(EXTHM_VERSION_MAINTENANCE),0)
         ifeq ($(EXTHM_VERSION_APPEND_TIME_OF_DAY),true)
-            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d_%H%M%S)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
+            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d_%H%M%S)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
         else
-            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
+            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
         endif
     else
         ifeq ($(EXTHM_VERSION_APPEND_TIME_OF_DAY),true)
-            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(EXTHM_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d_%H%M%S)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
+            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(EXTHM_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d_%H%M%S)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
         else
-            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(EXTHM_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
+            EXTHM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(EXTHM_VERSION_MAINTENANCE)-$(shell date -u +%Y%m%d)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)
         endif
     endif
 endif
@@ -115,3 +110,4 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
     endif
 endif
 endif
+
