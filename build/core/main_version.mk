@@ -19,8 +19,8 @@ ADDITIONAL_BUILD_PROPERTIES += \
 
 # LineageOS Platform SDK Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.exthm.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
+    ro.lineage.build.version.plat.sdk=$(LINEAGE_PLATFORM_SDK_VERSION)
 
 # LineageOS Platform Internal Version
 ADDITIONAL_BUILD_PROPERTIES += \
-    ro.exthm.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
+    ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
