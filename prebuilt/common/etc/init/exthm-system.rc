@@ -1,4 +1,4 @@
-# LineageOS core functionality
+# exTHmUI core functionality
 on init
     export TERMINFO /system/etc/terminfo
 

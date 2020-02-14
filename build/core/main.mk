@@ -1,2 +1,2 @@
-# Include LineageOS versions
-include $(TOPDIR)vendor/lineage/build/core/main_version.mk
+# Include exTHmUI versions
+include $(TOPDIR)vendor/exthm/build/core/main_version.mk

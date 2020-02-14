@@ -1,11 +1,11 @@
-# Inherit full common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full.mk)
+# Inherit full common exTHm stuff
+$(call inherit-product, vendor/exthm/config/common_full.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME
 
-# Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
+# Include exTHm LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/exthm/overlay/dictionaries
 
-$(call inherit-product, vendor/lineage/config/telephony.mk)
+$(call inherit-product, vendor/exthm/config/telephony.mk)

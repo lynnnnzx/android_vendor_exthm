@@ -82,9 +82,9 @@ else
 endif
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
-    vendor/lineage/build/target/product/security/lineage
+    vendor/exthm/build/target/product/security/lineage
 
--include vendor/lineage-priv/keys/keys.mk
+-include vendor/exthm-priv/keys/keys.mk
 
 EXTHM_DISPLAY_VERSION := $(EXTHM_VERSION)
 

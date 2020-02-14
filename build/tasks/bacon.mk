@@ -1,5 +1,6 @@
 # Copyright (C) 2017 Unlegacy-Android
-# Copyright (C) 2017,2020 The LineageOS Project
+#           (C) 2017 The LineageOS Project
+#           (C) 2020 The exTHmUI Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +15,9 @@
 # limitations under the License.
 
 # -----------------------------------------------------------------
-# Lineage OTA update package
+# exTHm OTA update package
 
-EXTHM_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(EXTHM_VERSION).zip
+EXTHM_TARGET_PACKAGE := $(PRODUCT_OUT)/exthm-$(EXTHM_VERSION).zip
 
 MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 
