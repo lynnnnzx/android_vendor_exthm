@@ -253,14 +253,19 @@ def add_to_manifest(repositories, fallback_branch = None):
     for repository in repositories:
         repo_name = repository['repository']
         repo_target = repository['target_path']
+        if 'remote' in repository:
+            repo_remote = repository['remote']
+        else:
+            repo_remote = org_devices
+
         print('Checking if %s is fetched from %s' % (repo_target, repo_name))
         if is_in_manifest(repo_target):
-            print('%s/%s already fetched to %s' % (org_devices, repo_name, repo_target))
+            print('%s/%s already fetched to %s' % (repo_remote, repo_name, repo_target))
             continue
 
-        print('Adding dependency: %s/%s -> %s' % (org_devices, repo_name, repo_target))
+        print('Adding dependency: %s/%s -> %s' % (repo_remote, repo_name, repo_target))
         project = ElementTree.Element("project", attrib = { "path": repo_target,
-            "remote": "%s" % org_devices, "name": "%s" % repo_name })
+            "remote": "%s" % repo_remote, "name": "%s" % repo_name })
 
         if 'branch' in repository:
             project.set('revision',repository['branch'])
