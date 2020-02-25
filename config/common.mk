@@ -109,9 +109,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
-    LineageSetupWizard \
+    LineageSetupWizard
+
+# Core exTHmUI packages
+PRODUCT_PACKAGES += \
+    ThemeManager \
     Updater
 
+# Custom exTHmUI packages
+PRODUCT_PACKAGES += \
+    APlayer
+
+# exTHmUI Theme
+PRODUCT_PACKAGES += \
+    DefaultTheme
+    
 # Themes
 PRODUCT_PACKAGES += \
     LineageThemesStub \
