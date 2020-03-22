@@ -40,7 +40,6 @@ except ImportError:
 
 from xml.etree import ElementTree
 
-default_manifest = get_manifest_path()
 lineage_manifest = ".repo/manifests/snippets/lineage.xml"
 exthm_manifest = ".repo/manifests/snippets/exthm.xml"
 
@@ -49,7 +48,6 @@ custom_default_revision = "exthm-9"
 custom_dependencies = "exthm.dependencies"
 
 org_devices = "exthmui-devices"
-org_devices_display = "exthmui-devices"
 
 product = sys.argv[1]
 
@@ -144,17 +142,17 @@ def load_manifest(manifest):
 
 def get_default(manifest=None):
     m = manifest
-    if not m:
-        m = load_manifest(default_manifest)
+    if m is None:
+        m = load_manifest(get_manifest_path)
     d = m.findall('default')[0]
     return d
 
 def get_remote(manifest=None, remote_name=None):
     m = manifest
 
-    if not m:
-        m = load_manifest(default_manifest)
-    if not remote_name:
+    if m is None:
+        m = load_manifest(get_manifest_path)
+    if remote_name is None:
         remote_name = get_default(manifest=m).get('remote')
     remotes = m.findall('remote')
     for remote in remotes:
@@ -164,23 +162,23 @@ def get_remote(manifest=None, remote_name=None):
 
 def get_revision(manifest=None, p=None):
     m = manifest
-    if not m:
-        m = load_manifest(default_manifest)
+    if m is None:
+        m = load_manifest(get_manifest_path)
     project = None
     revision = None
-    if p:
+    if p is not None:
         for proj in m.findall('project'):
             if proj.get('path').strip('/') == p:
                 project = proj
                 break
-    if project:
+    if project is not None:
         revision = project.get('revision')
-    if revision:
+    if revision is not None:
         return revision.replace('refs/heads/', '').replace('refs/tags/', '')
-    remote = get_remote(manifest=m, remote_name=org_devices_display)
-    if remote:
+    remote = get_remote(manifest=m, remote_name=org_devices)
+    if remote is not None:
         revision = remote.get('revision')
-    if not revision:
+    if revision is None:
         return custom_default_revision
     return revision.replace('refs/heads/', '').replace('refs/tags/', '')
 
