@@ -202,6 +202,14 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/exthm/overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/exthm/overlay/common
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= true
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED), true)
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+endif
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # GApps
 ifeq ($(EXTHM_GAPPS),true)
