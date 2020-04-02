@@ -122,6 +122,8 @@ PRODUCT_PACKAGES += \
 
 # Custom exTHmUI packages
 PRODUCT_PACKAGES += \
+    StitchImage \
+    StitchImageService \
     APlayer
 
 # exTHmUI Theme
