@@ -99,7 +99,8 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Bootanimation
 PRODUCT_PACKAGES += \
-    bootanimation.zip
+    bootanimation.zip \
+    bootanimation-dark.zip
 
 # AOSP packages
 PRODUCT_PACKAGES += \
