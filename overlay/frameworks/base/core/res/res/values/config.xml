@@ -169,4 +169,8 @@
         <item>com.tencent.mm</item>
         <item>com.tencent.mobileqq</item>
     </string-array>
+
+    <!-- Live Captions provided by Google's Device Personalization Service package  -->
+    <string name="config_defaultSystemCaptionsManagerService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.SystemCaptionsManagerService</string>
+    <string name="config_defaultSystemCaptionsService">com.google.android.as/com.google.android.apps.miphone.aiai.captions.CaptionsService</string>
 </resources>
