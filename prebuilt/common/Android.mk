@@ -13,6 +13,9 @@ include $(BUILD_PREBUILT)
 # Copies the APN list file into $(TARGET_COPY_OUT_PRODUCT)/etc for the product as apns-conf.xml.
 # In the case where $(CUSTOM_APNS_FILE) is defined, the content of $(CUSTOM_APNS_FILE)
 # is added or replaced to the $(DEFAULT_APNS_FILE).
+# Only use it in non generic devices
+ifeq ($(findstring generic, $(TARGET_DEVICE)),)
+
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := apns-conf.xml
@@ -38,6 +41,8 @@ LOCAL_PREBUILT_MODULE_FILE := $(FINAL_APNS_FILE)
 LOCAL_PRODUCT_MODULE := true
 
 include $(BUILD_PREBUILT)
+
+endif
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := fonts_customization.xml
