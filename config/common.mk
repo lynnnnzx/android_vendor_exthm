@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Core exTHmUI packages
 PRODUCT_PACKAGES += \
+    SoftAPManager \
     ThemeManager \
     Updater \
     GamingMode
