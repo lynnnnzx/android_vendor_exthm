@@ -122,6 +122,7 @@ PRODUCT_PACKAGES += \
 # Core exTHmUI packages
 PRODUCT_PACKAGES += \
     StitchImage \
+    SoftAPManager \
     ThemeManager \
     Updater \
     GamingMode
