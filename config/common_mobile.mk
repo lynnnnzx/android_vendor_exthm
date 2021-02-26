@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
     AudioFX \
     Backgrounds \
     Etar \
-    Jelly \
+    ViaBrowser \
     LockClock \
     Profiles \
     Seedvault \
