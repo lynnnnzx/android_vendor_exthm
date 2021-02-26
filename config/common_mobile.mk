@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     Backgrounds \
     Eleven \
     Etar \
-    Jelly \
+    ViaBrowser \
     Profiles \
     Seedvault
 
