@@ -18,8 +18,8 @@ ifndef EXTHM_BUILDTYPE
     endif
 endif
 
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter OFFICIAL,$(EXTHM_COMPILERTYPE)),)
+# Filter out random types, so it'll reset to NUCLEAR
+ifeq ($(filter PHANTASM,$(EXTHM_COMPILERTYPE)),)
     EXTHM_COMPILERTYPE :=
 endif
 
@@ -29,8 +29,8 @@ ifeq ($(filter RELEASE BETA ALPHA SNAPSHOT,$(EXTHM_BUILDTYPE)),)
 endif
 
 ifndef EXTHM_COMPILERTYPE
-    # If EXTHM_COMPILERTYPE is not defined, set to UNOFFICIAL
-    EXTHM_COMPILERTYPE := UNOFFICIAL
+    # If EXTHM_COMPILERTYPE is not defined, set to NUCLEAR
+    EXTHM_COMPILERTYPE := NUCLEAR
 endif
 
 ifndef EXTHM_BUILDTYPE
@@ -45,7 +45,7 @@ ifdef EXTHM_EXTRAVERSION
     EXTHM_EXTRAVERSION := -$(EXTHM_EXTRAVERSION)
 endif
 
-ifeq ($(EXTHM_COMPILERTYPE), UNOFFICIAL)
+ifeq ($(EXTHM_COMPILERTYPE), NUCLEAR)
     ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
         EXTHM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
     endif
@@ -90,7 +90,7 @@ EXTHM_DISPLAY_VERSION := $(EXTHM_VERSION)
 
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
 ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-    ifneq ($(EXTHM_BUILDTYPE), UNOFFICIAL)
+    ifneq ($(EXTHM_BUILDTYPE), NUCLEAR)
         ifndef TARGET_VENDOR_RELEASE_BUILD_ID
             ifneq ($(EXTHM_EXTRAVERSION),)
                 # Remove leading dash from EXTHM_EXTRAVERSION
