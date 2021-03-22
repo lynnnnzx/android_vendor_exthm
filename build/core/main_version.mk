@@ -11,7 +11,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
     ro.exthm.releasetype=$(EXTHM_BUILDTYPE) \
     ro.exthm.build.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR) \
     ro.modversion=$(EXTHM_VERSION) \
-    ro.exthmlegal.url=https://lineageos.org/legal
+    ro.exthmlegal.url=https://exthmui.cn/legal.html
 
 # exTHmUI Platform Display Version
 ADDITIONAL_BUILD_PROPERTIES += \

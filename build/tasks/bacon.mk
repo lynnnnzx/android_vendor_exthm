@@ -25,4 +25,25 @@ MD5 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/md5sum
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(EXTHM_TARGET_PACKAGE)
 	$(hide) $(MD5) $(EXTHM_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(EXTHM_TARGET_PACKAGE).md5sum
-	@echo "Package Complete: $(EXTHM_TARGET_PACKAGE)" >&2
+	@echo -e ${CL_CYN}""${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}""${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m                        _/_/_/_/_/  _/    _/                      _/    _/  _/_/_/  \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[32m     _/_/    _/    _/      _/      _/    _/  _/_/_/  _/_/        _/    _/    _/     \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[33m  _/_/_/_/    _/_/        _/      _/_/_/_/  _/    _/    _/      _/    _/    _/      \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[34m _/        _/    _/      _/      _/    _/  _/    _/    _/      _/    _/    _/       \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[35m  _/_/_/  _/    _/      _/      _/    _/  _/    _/    _/        _/_/    _/_/_/      \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}""${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m "${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mexTHmUI -- Based on LineageOS\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mVisit our website https://exthmui.cn or our source repo https://github.com/exthmui\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mfor more information. \033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mSpecial Thanks:cjybyjk, Color-yourself, KevinZonda, kmou424, GoogleChinaCEO, ISNing,\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mand all the other individuals and organizations that contribute!\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m==============================-Package Build Information-==============================\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"Package File: $(EXTHM_TARGET_PACKAGE)" >&2 ${CL_RST}
+	@echo -e ${CL_CYN}"MD5: "${CL_MAG}" `cat $(EXTHM_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
+	@echo -e ${CL_CYN}"Size:"${CL_MAG}" `ls -lah $(EXTHM_TARGET_PACKAGE) | cut -d ' ' -f 5`"${CL_RST}
+	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m"${CL_RST}
+	
