@@ -115,7 +115,8 @@ PRODUCT_PACKAGES += \
 # Core exTHmUI packages
 PRODUCT_PACKAGES += \
     ThemeManager \
-    Updater
+    Updater \
+    GamingMode
 
 # Custom exTHmUI packages
 PRODUCT_PACKAGES += \
