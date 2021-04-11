@@ -14,6 +14,7 @@
 # limitations under the License.
 
 $(call inherit-product, build/target/product/aosp_arm.mk)
+$(call inherit-product, build/target/product/gsi_release.mk)
 
 include vendor/exthm/build/target/product/exthm_generic_target.mk
 

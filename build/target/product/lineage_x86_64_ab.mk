@@ -1,5 +1,4 @@
 # Copyright (C) 2018-2020 The LineageOS Project
-#           (C) 2020-2021 The exTHmUI Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,11 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, build/target/product/aosp_arm64.mk)
-$(call inherit-product, build/target/product/gsi_release.mk)
+$(call inherit-product, build/target/product/aosp_x86_64_ab.mk)
 
-include vendor/exthm/build/target/product/exthm_generic_target.mk
+include vendor/lineage/build/target/product/lineage_generic_target.mk
 
-TARGET_NO_KERNEL_OVERRIDE := true
+PRODUCT_NAME := lineage_x86_64_ab
 
-PRODUCT_NAME := exthm_arm64
+PRODUCT_SDK_ADDON_SYS_IMG_SOURCE_PROP := $(LOCAL_PATH)/source.properties

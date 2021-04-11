@@ -20,6 +20,10 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/exthm_arm64.mk \
     $(LOCAL_DIR)/exthm_x86.mk \
     $(LOCAL_DIR)/exthm_x86_64.mk \
+    $(LOCAL_DIR)/exthm_arm_ab.mk \
+    $(LOCAL_DIR)/exthm_arm64_ab.mk \
+    $(LOCAL_DIR)/exthm_x86_ab.mk \
+    $(LOCAL_DIR)/exthm_x86_64_ab.mk \
     $(LOCAL_DIR)/exthm_tv_arm.mk \
     $(LOCAL_DIR)/exthm_tv_arm64.mk \
     $(LOCAL_DIR)/exthm_tv_x86.mk \
@@ -30,6 +34,10 @@ COMMON_LUNCH_CHOICES := \
     exthm_arm64-userdebug \
     exthm_x86-userdebug \
     exthm_x86_64-userdebug \
+    exthm_arm_ab-userdebug \
+    exthm_arm64_ab-userdebug \
+    exthm_x86_ab-userdebug \
+    exthm_x86_64_ab-userdebug \
     exthm_tv_arm-userdebug \
     exthm_tv_arm64-userdebug \
     exthm_tv_x86-userdebug \

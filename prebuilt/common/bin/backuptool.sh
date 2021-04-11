@@ -69,7 +69,7 @@ if [ -d /tmp/addon.d/ ]; then
       if [ $v -ge 3 ]; then
         $script $stage
       else
-        ADDOND_VERSION=2 $script $stage
+        ADDOND_VERSION= $script $stage
       fi
     done
   done
@@ -142,7 +142,8 @@ BLK_PATH=$(dirname "$SYSDEV")
 mount_extra() {
   for partition in $@; do
     mnt_point="/$partition"
-    mountpoint "$mnt_point" >/dev/null 2>&1 && break
+    mountpoint "$mnt_point" >/dev/null 2>&1 && continue
+    [ -L "$SYSMOUNT/$partition" ] && continue
 
     blk_dev=$(find_block "$partition")
     if [ -e "$blk_dev" ]; then
