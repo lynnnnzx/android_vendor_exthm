@@ -39,7 +39,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"\033[36mVisit our website https://exthmui.cn or our source repo https://github.com/exthmui\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"\033[36mfor more information. \033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m"${CL_RST}
-	@echo -e ${CL_CYN}"\033[36mSpecial Thanks:cjybyjk, Color-yourself, KevinZonda, kmou424, GoogleChinaCEO, ISNing,\033[0m"${CL_RST}
+	@echo -e ${CL_CYN}"\033[36mSpecial Thanks:cjybyjk, Col_or, KevinZonda, kmou424, GoogleChinaCEO, ISNing,\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"\033[36mand all the other individuals and organizations that contribute!\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"\033[31m==============================-Package Build Information-==============================\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"Package File: $(EXTHM_TARGET_PACKAGE)" >&2 ${CL_RST}
