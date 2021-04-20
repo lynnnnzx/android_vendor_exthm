@@ -12,4 +12,7 @@
     limitations under the License.
 -->
 <resources>
+    <!-- Connectivity -->
+    <bool name="def_bluetooth_on">false</bool>
+    <bool name="def_wifi_on">true</bool>
 </resources>
