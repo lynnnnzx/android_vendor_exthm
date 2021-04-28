@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
 
 # Config
 PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
+    SimpleDeviceConfig \
+    CaptivePortalConfig
 
 # Extra tools in Lineage
 PRODUCT_PACKAGES += \
