@@ -1,0 +1,22 @@
+emotional support: 情感支持
+suicide: 自杀
+drugs|addiction: 戒毒
+children: 少年儿童
+senior: 老年人
+human trafficking: 贩卖人口
+gambling: 赌博
+domestic violence: 家庭暴力
+sexuality：性取向
+gender: 性别
+violence: 暴力
+women: 妇女
+
+
+<item>
+    <number></number>
+    <name></name>
+    <categories></categories>
+    <languages>chinese</languages>
+    <organization>China Gov.</organization>
+    <website></website>
+</item>
