@@ -438,7 +438,7 @@ function makerecipe() {
 }
 
 function exthmgerrit() {
-    if [ "$(__detect_shell)" = "zsh" ]; then
+    if [ "$(basename $SHELL)" = "zsh" ]; then
         # zsh does not define FUNCNAME, derive from funcstack
         local FUNCNAME=$funcstack[1]
     fi
@@ -573,7 +573,7 @@ EOF
             esac
             shift
             git push $@ ssh://$user@$review:29418/$project \
-                $local_branch:refs/for/$remote_branch || return 1
+                ${local_branch}:refs/for/$remote_branch || return 1
             ;;
         changes|for)
             if [ "$FUNCNAME" = "exthmgerrit" ]; then
@@ -854,9 +854,9 @@ EOF
 
     stop_n_start=false
     for TARGET in $(echo $LOC | tr " " "\n" | sed "s#.*${RELOUT}##" | sort | uniq); do
-        # Make sure file is in $OUT/system, $OUT/data, $OUT/odm, $OUT/oem, $OUT/product, $OUT/product_services or $OUT/vendor
+        # Make sure file is in $OUT/{system,system_ext,data,odm,oem,product,product_services,vendor}
         case $TARGET in
-            /system/*|/data/*|/odm/*|/oem/*|/product/*|/product_services/*|/vendor/*)
+            /system/*|/system_ext/*|/data/*|/odm/*|/oem/*|/product/*|/product_services/*|/vendor/*)
                 # Get out file from target (i.e. /system/bin/adb)
                 FILE=$OUT$TARGET
             ;;
