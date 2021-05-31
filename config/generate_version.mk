@@ -29,6 +29,19 @@ ifeq ($(filter PHANTASM,$(EXTHM_COMPILERTYPE)),)
     EXTHM_COMPILERTYPE :=
 endif
 
+# OFFICIAL_DEVICES
+ifeq ($(EXTHM_COMPILERTYPE), PHANTASM)
+    LIST = $(shell cat vendor/exthm/exthm.devices)
+    ifeq ($(filter $(EXTHM_BUILD), $(LIST)), $(EXTHM_BUILD))
+        IS_PHANTASM=true
+        EXTHM_COMPILERTYPE := PHANTASM
+    endif
+    ifneq ($(IS_PHANTASM), true)
+        EXTHM_COMPILERTYPE := NUCLEAR
+        $(error Device is not phantasized "$(EXTHM_BUILD)")
+    endif
+endif
+
 # Filter out random types, so it'll reset to SNAPSHOT
 ifeq ($(filter RELEASE BETA ALPHA SNAPSHOT,$(EXTHM_BUILDTYPE)),)
     EXTHM_BUILDTYPE :=
