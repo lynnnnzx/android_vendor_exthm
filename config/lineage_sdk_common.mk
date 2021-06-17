@@ -1,6 +1,7 @@
 # Permissions for lineage sdk services
 PRODUCT_COPY_FILES += \
     vendor/exthm/config/permissions/org.lineageos.audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.audio.xml \
+    vendor/exthm/config/permissions/org.lineageos.globalactions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.globalactions.xml \
     vendor/exthm/config/permissions/org.lineageos.hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.hardware.xml \
     vendor/exthm/config/permissions/org.lineageos.livedisplay.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.livedisplay.xml \
     vendor/exthm/config/permissions/org.lineageos.performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/org.lineageos.performance.xml \
