@@ -42,6 +42,3 @@ COMMON_LUNCH_CHOICES := \
     exthm_tv_arm64-userdebug \
     exthm_tv_x86-userdebug \
     exthm_tv_x86_64-userdebug
-
-# Flatten APEXs for performance
-OVERRIDE_TARGET_FLATTEN_APEX := true
