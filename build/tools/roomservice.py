@@ -44,7 +44,7 @@ lineage_manifest = ".repo/manifests/snippets/lineage.xml"
 exthm_manifest = ".repo/manifests/snippets/exthm.xml"
 
 custom_local_manifest = ".repo/local_manifests/roomservice.xml"
-custom_default_revision = "exthm-9"
+custom_default_revision = "exthm-11"
 custom_dependencies = "exthm.dependencies"
 
 org_devices = "exthmui-devices"
