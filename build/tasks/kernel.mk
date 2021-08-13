@@ -1,5 +1,5 @@
 # Copyright (C) 2012 The CyanogenMod Project
-#           (C) 2017-2020 The LineageOS Project
+#           (C) 2017-2021 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -61,6 +61,9 @@
 #                                          modules in system instead of vendor
 #   NEED_KERNEL_MODULE_VENDOR_OVERLAY  = Optional, if true, install kernel
 #                                          modules in vendor_overlay instead of vendor
+#
+#   TARGET_FORCE_PREBUILT_KERNEL       = Optional, use TARGET_PREBUILT_KERNEL even if
+#                                          kernel sources are present
 
 ifneq ($(TARGET_NO_KERNEL),true)
 ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
