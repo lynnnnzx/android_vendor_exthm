@@ -89,6 +89,13 @@ ifeq ($(WITH_TWRP),true)
 include vendor/exthm/config/twrp.mk
 endif
 
+# Tablet Taskbar
+ifeq ($(EXTHM_TABLET_MODE),true)
+PRODUCT_PACKAGES := \
+    TabletSystemUIApk \
+    TabletSettingsApk
+endif
+
 # Do not include art debug targets
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
@@ -115,7 +122,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
-    LineageSetupWizard
+    LineageSetupWizard \
+    org.lineageos.platform-res \
+    org.lineageos.platform
 
 # Core exTHmUI packages
 PRODUCT_PACKAGES += \
