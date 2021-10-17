@@ -27,7 +27,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.setupwizard.enterprise_mode=1 \
     setupwizard.feature.predeferred_enabled=false \
-    ro.setupwizard.mode=OPTIONAL
+    ro.setupwizard.mode=OPTIONAL \
+    ro.exthm.legal=http://exthmui.cn/legal.html
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1 \

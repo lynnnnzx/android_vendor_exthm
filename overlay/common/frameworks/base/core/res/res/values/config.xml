@@ -43,7 +43,7 @@
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
+    <integer name="config_multiuserMaximumUsers">10</integer>
 
     <!-- The package name for the default wellbeing app.
          This package must be trusted, as it has the permissions to control other applications
@@ -125,6 +125,7 @@
         <item>nekox.messenger</item>
         <item>org.telegram.plus</item>
         <item>org.thunderdog.challegram</item>
+        <item>org.exthmui.messaging</item>
         <item>im.vector.app</item>
         <item>cx.ring</item>
         <item>org.briarproject.briar.android</item>
