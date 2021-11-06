@@ -34,43 +34,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     QuickAccessWallet
 
-# Accents
-PRODUCT_PACKAGES += \
-    AccentColorYellowOverlay \
-    AccentColorVioletOverlay \
-    AccentColorTealOverlay \
-    AccentColorRedOverlay \
-    AccentColorQGreenOverlay \
-    AccentColorPinkOverlay \
-    AccentColorPixelBlueOverlay \
-    AccentColorLightPurpleOverlay \
-    AccentColorIndigoOverlay \
-    AccentColorFlatPinkOverlay \
-    AccentColorCyanOverlay \
-    AccentColorBlueGrayOverlay
-
-# Custom Overlays
-# Settings
-PRODUCT_PACKAGES += \
-    SystemRavenBlackOverlay \
-    SystemUIRavenBlackOverlay \
-    SystemDarkGrayOverlay \
-    SystemUIDarkGrayOverlay \
-    SystemStyleOverlay \
-    SystemUIStyleOverlay \
-    SystemNightOverlay \
-    SystemUINightOverlay \
-    SystemSolarizedDarkOverlay \
-    SystemUISolarizedDarkOverlay \
-    SystemMaterialOceanOverlay \
-    SystemUIMaterialOceanOverlay \
-    SystemBakedGreenOverlay \
-    SystemUIBakedGreenOverlay \
-    SystemChocoXOverlay \
-    SystemUIChocoXOverlay \
-    SystemDarkAubergineOverlay \
-    SystemUIDarkAubergineOverlay
-
 # Charger mode images
 ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
 PRODUCT_PACKAGES += \

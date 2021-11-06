@@ -1,5 +1,5 @@
 // Copyright 2015 Google Inc. All rights reserved.
-// Copyright (C) 2018 The LineageOS Project
+// Copyright (C) 2018,2021 The LineageOS Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -266,17 +266,18 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 	// Dummy output dep
 	dummyDep := android.PathForModuleGen(ctx, ".dummy_dep")
 
-	// tell the sbox command which directory to use as its sandbox root
-	buildDir := android.PathForOutput(ctx,"generator")
-
 	genDir := android.PathForModuleGen(ctx)
+	manifestPath := android.PathForModuleOut(ctx, "generator.sbox.textproto")
+
 	// Use a RuleBuilder to create a rule that runs the command inside an sbox sandbox.
-	rule := android.NewRuleBuilder(pctx, ctx).Sbox(genDir, buildDir).SandboxTools()
+	rule := android.NewRuleBuilder(pctx, ctx).Sbox(genDir, manifestPath).SandboxTools()
+
 	rule.Command().
 		Text(rawCommand).
 		ImplicitOutput(dummyDep).
 		Implicits(g.inputDeps).
 		Implicits(g.implicitDeps)
+
 	rule.Command().Text("touch").Output(dummyDep)
 
 	g.outputDeps = append(g.outputDeps, dummyDep)

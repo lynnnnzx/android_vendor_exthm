@@ -34,6 +34,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1 \
     persist.sys.disable_rescue=true
 
+# Blur
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.launcher.blur.appLaunch=false
+
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
@@ -61,11 +65,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 # Disable extra StrictMode features on all non-engineering builds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
-
-# Enable blur
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1 \
-    ro.sf.blurs_are_expensive=1
 
 # GBoard
 PRODUCT_PRODUCT_PROPERTIES += \

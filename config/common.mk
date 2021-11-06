@@ -21,7 +21,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/exthm/overlay/themes/exthmIcons
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/exthm/overlay/common \
+    vendor/exthm/overlay/common
 
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
