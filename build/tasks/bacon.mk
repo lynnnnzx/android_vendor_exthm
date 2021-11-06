@@ -44,7 +44,7 @@ bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	@echo -e ${CL_CYN}"\033[36mand all the other individuals and organizations that contribute!\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"\033[31m==============================-Package Build Information-==============================\033[0m"${CL_RST}
 	@echo -e ${CL_CYN}"Package File: $(EXTHM_TARGET_PACKAGE)" >&2 ${CL_RST}
-	@echo -e ${CL_CYN}"MD5: "${CL_MAG}" `cat $(EXTHM_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
+	@echo -e ${CL_CYN}"Sha256: "${CL_MAG}" `cat $(EXTHM_TARGET_PACKAGE).sha256sum | cut -d ' ' -f 1`"${CL_RST}
 	@echo -e ${CL_CYN}"Size:"${CL_MAG}" `ls -lah $(EXTHM_TARGET_PACKAGE) | cut -d ' ' -f 5`"${CL_RST}
 	@echo -e ${CL_CYN}"\033[31m=======================================================================================\033[0m"${CL_RST}
 	
