@@ -74,7 +74,6 @@ $(TARGET_GENERATED_BOOTANIMATION_DARK): $(SOONG_ZIP)
 	vendor/exthm/prebuilt/tools-bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES_DARK)/part1/*.png; \
 	vendor/exthm/prebuilt/tools-bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES_DARK)/part2/*.png; \
 	vendor/exthm/prebuilt/tools-bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES_DARK)/part3/*.png; \
-	vendor/exthm/prebuilt/tools-bin/mogrify -resize $$RESOLUTION -colors 250 $(INTERMEDIATES_DARK)/part4/*.png; \
 	echo "$$IMAGESCALEWIDTH $$IMAGESCALEHEIGHT 60" > $(INTERMEDIATES_DARK)/desc.txt; \
 	cat vendor/exthm/bootanimation/desc_dark.txt >> $(INTERMEDIATES_DARK)/desc.txt
 	$(hide) $(SOONG_ZIP) -L 0 -o $(TARGET_GENERATED_BOOTANIMATION_DARK) -C $(INTERMEDIATES_DARK) -D $(INTERMEDIATES_DARK)
