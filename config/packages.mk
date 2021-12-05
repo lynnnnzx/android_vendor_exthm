@@ -17,14 +17,13 @@
 PRODUCT_PACKAGES += \
     BluetoothExt \
     SimpleCalendar \
-    DuckDuckGo \
+    ViaBrowser \
     ExactCalculator \
     LatinIME \
     Launcher3QuickStep \
     messaging \
     SimpleGallery \
     Stk \
-    stats \
     ThemePicker \
     ExthmThemesStub \
     OmniJaws \
