@@ -31,7 +31,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.exthm.legal=http://exthmui.cn/legal.html
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.selinux=1 \
     persist.sys.disable_rescue=true
 
 # Blur
