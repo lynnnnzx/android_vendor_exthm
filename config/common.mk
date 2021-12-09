@@ -43,7 +43,9 @@ PRODUCT_COPY_FILES += \
 
 # init file
 PRODUCT_COPY_FILES += \
-    vendor/exthm/prebuilt/common/etc/init.local.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.exthm.rc
+    vendor/exthm/prebuilt/common/etc/init/init.exthm-system.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.exthm-system.rc \
+    vendor/exthm/prebuilt/common/etc/init/init.exthm-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.exthm-updater.rc \
+    vendor/exthm/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
