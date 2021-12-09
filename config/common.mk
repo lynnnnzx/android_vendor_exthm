@@ -54,11 +54,20 @@ PRODUCT_COPY_FILES += \
     vendor/exthm/build/tools/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
     vendor/exthm/build/tools/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
     vendor/exthm/build/tools/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/bin/backuptool_ab.sh \
+    system/bin/backuptool_ab.functions \
+    system/bin/backuptool_postinstall.sh
+    
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
 endif
 endif
+
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/addon.d/50-exthm.sh
 
 # Enable wireless Xbox 360 controller support
 PRODUCT_COPY_FILES += \
