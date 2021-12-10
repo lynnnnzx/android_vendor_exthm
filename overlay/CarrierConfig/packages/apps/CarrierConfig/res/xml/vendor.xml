@@ -1230,6 +1230,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Mobile</string>
+        <string name="carrier_name_string_zh-CN">中国移动</string>
+        <string name="carrier_name_string_zh-TW">中國移動</string>
+        <string name="carrier_name_string_bo-CN">སྒུལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">كۆچمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1249,6 +1253,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <string name="carrier_name_string_zh-CN">中国联通</string>
+        <string name="carrier_name_string_zh-TW">中國聯通</string>
+        <string name="carrier_name_string_bo-CN">འབྲེལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">بىرلەشمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="02">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1298,6 +1306,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Mobile</string>
+        <string name="carrier_name_string_zh-CN">中国移动</string>
+        <string name="carrier_name_string_zh-TW">中國移動</string>
+        <string name="carrier_name_string_bo-CN">སྒུལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">كۆچمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="03">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1327,6 +1339,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Telecom</string>
+        <string name="carrier_name_string_zh-CN">中国电信</string>
+        <string name="carrier_name_string_zh-TW">中國電信</string>
+        <string name="carrier_name_string_bo-CN">གློག་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">تېلېگراف</string>
         <boolean name="config_auto_retry_cfu_bool" value="true" />
     </carrier_config>
     <carrier_config mcc="460" mnc="04">
@@ -1352,6 +1368,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Telecom</string>
+        <string name="carrier_name_string_zh-CN">中国电信</string>
+        <string name="carrier_name_string_zh-TW">中國電信</string>
+        <string name="carrier_name_string_bo-CN">གློག་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">تېلېگراف</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="06">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1367,6 +1387,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <string name="carrier_name_string_zh-CN">中国联通</string>
+        <string name="carrier_name_string_zh-TW">中國聯通</string>
+        <string name="carrier_name_string_bo-CN">འབྲེལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">بىرلەشمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="07">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1416,6 +1440,10 @@
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="true" />
         <string name="carrier_name_string">China Mobile</string>
+        <string name="carrier_name_string_zh-CN">中国移动</string>
+        <string name="carrier_name_string_zh-TW">中國移動</string>
+        <string name="carrier_name_string_bo-CN">སྒུལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">كۆچمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="08">
         <boolean name="carrier_volte_available_bool" value="true" />
@@ -1475,6 +1503,10 @@
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
         <string name="carrier_name_string">China Unicom</string>
+        <string name="carrier_name_string_zh-CN">中国联通</string>
+        <string name="carrier_name_string_zh-TW">中國聯通</string>
+        <string name="carrier_name_string_bo-CN">འབྲེལ་འཕྲིན།</string>
+        <string name="carrier_name_string_ug-CN">بىرلەشمە</string>
     </carrier_config>
     <carrier_config mcc="460" mnc="10">
         <boolean name="allow_emergency_numbers_in_call_log_bool" value="true" />
