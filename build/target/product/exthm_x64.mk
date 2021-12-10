@@ -16,9 +16,6 @@ $(call inherit-product, build/target/product/sdk_phone_x86_64.mk)
 
 $(call inherit-product, vendor/exthm/config/common.mk)
 
-# Enable mainline checking
-PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
-
 # Overrides
 PRODUCT_NAME := exthm_x64
 PRODUCT_MODEL := exTHmUI Dev SDK x64
