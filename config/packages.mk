@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     ExthmThemesStub \
     OmniJaws \
-    WeatherIcons
+    WeatherIcons \
+    YellowPage
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
