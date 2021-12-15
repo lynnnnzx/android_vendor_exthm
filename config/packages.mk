@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     ExthmThemesStub \
     OmniJaws \
     WeatherIcons \
-    YellowPage
+    YellowPage \
+    GamingMode
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
