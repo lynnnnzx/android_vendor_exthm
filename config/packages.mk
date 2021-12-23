@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     SimpleCalendar \
     ViaBrowser \
-    ExactCalculator \
+    Calculator \
     LatinIME \
     Launcher3QuickStep \
     messaging \
