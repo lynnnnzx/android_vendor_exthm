@@ -107,10 +107,6 @@ PRODUCT_PACKAGES += \
     bootanimation.zip \
     bootanimation-dark.zip
 
-# AOSP packages
-PRODUCT_PACKAGES += \
-    Terminal
-
 # Lineage packages
 PRODUCT_PACKAGES += \
     LineageParts \
@@ -158,7 +154,6 @@ PRODUCT_PACKAGES += \
     setcap \
     unrar \
     vim \
-    wget \
     zip
 
 # Filesystems tools
