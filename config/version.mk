@@ -24,8 +24,10 @@ endif
 
 ifeq ($(EXTHM_GAPPS),true)
     EXTHM_VERSION_GAPPS := Gapps
+    EXTHM_HAS_GAPPS := true
 else
     EXTHM_VERSION_GAPPS := Vanilla
+    EXTHM_HAS_GAPPS := false
 endif
 
 # Set EXTHM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
@@ -102,10 +104,11 @@ ifeq ($(EXTHM_BUILDTYPE), RELEASE)
     endif
 else
     ifeq ($(EXTHM_VERSION_APPEND_TIME_OF_DAY),true)
-        EXTHM_VERSION := $(EXTHM_BUILD_VERSION)-$(shell date -u +%Y%m%d_%H%M%S)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)-$(EXTHM_VERSION_GAPPS)
+        EXTHM_BUILD_DATE := $(shell date -u +%Y%m%d_%H%M%S)
     else
-        EXTHM_VERSION := $(EXTHM_BUILD_VERSION)-$(shell date -u +%Y%m%d)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)-$(EXTHM_VERSION_GAPPS)
+        EXTHM_BUILD_DATE := $(shell date -u +%Y%m%d)
     endif
+        EXTHM_VERSION := $(EXTHM_BUILD_VERSION)-$(EXTHM_BUILD_DATE)-$(EXTHM_COMPILERTYPE)-$(EXTHM_BUILDTYPE)$(EXTHM_EXTRAVERSION)-$(EXTHM_BUILD)-$(EXTHM_VERSION_GAPPS)
 endif
 
 EXTHM_DISPLAY_VERSION := $(EXTHM_VERSION)
@@ -130,9 +133,12 @@ endif
 endif
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+  ro.exthmui.build.version=V$(EXTHM_BUILD_VERSION) \
+  ro.exthmui.build.date=$(EXTHM_BUILD_DATE) \
+  ro.exthmui.build.type=$(EXTHM_COMPILERTYPE) \
+  ro.exthmui.has.gapps=$(EXTHM_HAS_GAPPS) \
   ro.exthm.version=$(EXTHM_VERSION) \
   ro.exthm.releasetype=$(EXTHM_COMPILERTYPE) \
   ro.exthm.display.version=$(EXTHM_DISPLAY_VERSION) \
   ro.modversion=$(EXTHM_VERSION) \
-  ro.exthm.build.code=KomakusaSannyo(駒草山如) \
-
+  ro.exthm.build.code=KomakusaSannyo(駒草山如)
