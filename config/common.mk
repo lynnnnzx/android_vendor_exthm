@@ -117,8 +117,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SoftAPManager \
     ThemeManager \
-    Updater \
     GamingMode
+#    Updater
 
 # Custom exTHmUI packages
 PRODUCT_PACKAGES += \

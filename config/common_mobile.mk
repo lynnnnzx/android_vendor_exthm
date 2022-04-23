@@ -8,16 +8,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # AOSP packages
 PRODUCT_PACKAGES += \
-    Email \
-    Calculator \
-    Exchange2
+    Calculator
 
 # Lineage packages
 PRODUCT_PACKAGES += \
     Backgrounds \
     Eleven \
-    Etar \
-    ViaBrowser \
     Profiles \
     Seedvault
 
